@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dist": "node_modules/webpack/bin/webpack.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-server": "webpack-dev-server --progress --colors",
+    "dist": "webpack",
+    "mocha": "mocha test/*.spec.js",
+    "lint": "eslint src/*.js src/*.jsx test/*.spec.js",
+    "test": "npm run lint && npm run mocha"
   },
   "author": "Sean L. Mooney",
   "license": "MIT",
@@ -13,9 +16,17 @@
     "babel-core": "^6.9.0",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
-    "webpack": "^1.13.1"
+    "babel-preset-react": "^6.5.0",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.11.0",
+    "eslint-plugin-react": "^5.1.1",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "jquery": "^2.2.4"
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
   }
 }

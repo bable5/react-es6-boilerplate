@@ -6,10 +6,14 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.js/,
-            loader: 'babel',
-            include: __dirname + '/src'
-        } ]
+            test: /\.jsx?$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            include: __dirname + '/src',
+            query: {
+                presets: ['es2015', 'react']
+            }
+        }]
     }
 };
 

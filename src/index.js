@@ -1,4 +1,3 @@
-import $ from 'jquery';
-
-$('body').html('Hello');
+import Hello from './hello.jsx';
+import World from './world.jsx';
 
