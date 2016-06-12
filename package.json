@@ -6,8 +6,8 @@
   "scripts": {
     "dev-server": "webpack-dev-server --progress --colors",
     "dist": "webpack",
-    "mocha": "mocha test/*.spec.js",
-    "lint": "eslint src/*.js src/*.jsx test/*.spec.js",
+    "mocha": "mocha --compilers js:babel-core/register --recursive test",
+    "lint": "eslint src/** test/**",
     "test": "npm run lint && npm run mocha"
   },
   "author": "Sean L. Mooney",
@@ -22,6 +22,7 @@
     "eslint-plugin-react": "^5.1.1",
     "mocha": "^2.5.3",
     "react-addons-test-utils": "^15.1.0",
+    "sinon": "^1.17.4",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
