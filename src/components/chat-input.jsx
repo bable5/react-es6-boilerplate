@@ -7,7 +7,7 @@ import Button from '../../src/components/button.jsx';
 class ChatInput extends React.Component {
     render() {
         return (
-                <div>
+                <div className='chat-input'>
                     <Name />
                     <Message onChange={this.props.onMessageChange}
                         message={this.props.message}

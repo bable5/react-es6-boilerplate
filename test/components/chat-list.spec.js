@@ -34,6 +34,10 @@ describe('A list of chat items', () => {
         expect(element.is('ul')).to.equal(true);
     });
 
+    it('should have the \'messages\' class', () => {
+        expect(element.props().className).to.equal('messages');
+    });
+
     it('should render a list of items', () => {
         const children = node.props.children;
         expect(children.length).to.equal(expectedProperties.length);

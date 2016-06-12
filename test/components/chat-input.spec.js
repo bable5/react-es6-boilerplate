@@ -13,12 +13,13 @@ const chance = new Chance();
 
 describe("Chat Input Element", () => {
     let expectedProps,
+        wrapper,
         node;
 
     function renderComponent(props) {
-        const element = shallow( <ChatInput {...expectedProps}/>);
+        wrapper = shallow( <ChatInput {...expectedProps}/> );
 
-        node = element.node;
+        node = wrapper.node;
     }
 
     beforeEach(() => {
@@ -33,6 +34,10 @@ describe("Chat Input Element", () => {
 
     it('should be a div', () => {
         expect(node.type).to.equal('div');
+    });
+
+    it('should have the chat-input class', () => {
+        expect(wrapper.props().className).to.equal('chat-input');
     });
 
     it('should render chat message input elements', () => {

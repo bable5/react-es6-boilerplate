@@ -13,7 +13,7 @@ class ChatList extends React.Component {
 
     render() {
         const children = renderListItem.call(this);
-        return (<ul>
+        return (<ul className="messages">
                 {children}
                 </ul>);
     }
