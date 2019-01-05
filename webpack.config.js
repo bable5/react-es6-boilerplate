@@ -24,7 +24,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HWP(
-            {template: path.join(__dirname, '/src/index.html')}
+            {template: path.join(__dirname, '/dev-server/index.html')}
         )
     ],
     devServer: {
